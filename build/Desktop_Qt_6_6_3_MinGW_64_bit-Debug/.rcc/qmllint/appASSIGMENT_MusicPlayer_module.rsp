@@ -1,0 +1,10 @@
+-I
+C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug
+-I
+C:/Qt/6.6.3/mingw_64/./qml
+--resource
+C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/.rcc/qmake_ASSIGMENT_MusicPlayer.qrc
+--resource
+C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/.rcc/appASSIGMENT_MusicPlayer_raw_qml_0.qrc
+--module
+ASSIGMENT_MusicPlayer

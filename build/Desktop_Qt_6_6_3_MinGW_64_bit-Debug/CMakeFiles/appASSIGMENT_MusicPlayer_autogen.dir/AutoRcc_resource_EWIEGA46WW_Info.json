@@ -1,0 +1,38 @@
+{
+	"BUILD_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/appASSIGMENT_MusicPlayer_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer",
+	"CMAKE_SOURCE_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/appASSIGMENT_MusicPlayer_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/play.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/next-track.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/playlist.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/pause.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/equalizer.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/repeat.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/threedotvertical.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/volume.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/shuffle.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/autoplay.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/vinyl.png",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/rose-petals.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/heart.svg",
+		"C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/plus.svg"
+	],
+	"LOCK_FILE" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/appASSIGMENT_MusicPlayer_autogen.dir/AutoRcc_Resource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "Resource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_Resource.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.6.3/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/CMakeFiles/appASSIGMENT_MusicPlayer_autogen.dir/AutoRcc_Resource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Resource.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

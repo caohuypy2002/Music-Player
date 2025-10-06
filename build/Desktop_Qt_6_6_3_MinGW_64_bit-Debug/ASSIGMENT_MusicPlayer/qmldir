@@ -1,0 +1,9 @@
+module ASSIGMENT_MusicPlayer
+typeinfo appASSIGMENT_MusicPlayer.qmltypes
+prefer :/ASSIGMENT_MusicPlayer/
+Main 1.0 Main.qml
+CustomButton 1.0 CustomButton.qml
+ProgressBar 1.0 ProgressBar.qml
+VolumeBar 1.0 VolumeBar.qml
+PlaylistView 1.0 PlaylistView.qml
+

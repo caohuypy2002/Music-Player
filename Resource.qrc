@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icon/vinyl.png</file>
+        <file>Icon/rose-petals.svg</file>
+        <file>Icon/autoplay.svg</file>
+        <file>Icon/equalizer.svg</file>
+        <file>Icon/heart.svg</file>
+        <file>Icon/next-track.svg</file>
+        <file>Icon/pause.svg</file>
+        <file>Icon/play.svg</file>
+        <file>Icon/playlist.svg</file>
+        <file>Icon/plus.svg</file>
+        <file>Icon/repeat.svg</file>
+        <file>Icon/shuffle.svg</file>
+        <file>Icon/threedotvertical.svg</file>
+        <file>Icon/volume.svg</file>
+    </qresource>
+</RCC>

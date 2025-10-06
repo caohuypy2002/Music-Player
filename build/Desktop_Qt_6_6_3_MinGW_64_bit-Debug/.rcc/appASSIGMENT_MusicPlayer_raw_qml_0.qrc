@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="/ASSIGMENT_MusicPlayer/">
+    <file alias="Main.qml">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Main.qml</file>
+    <file alias="CustomButton.qml">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/CustomButton.qml</file>
+    <file alias="ProgressBar.qml">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/ProgressBar.qml</file>
+    <file alias="VolumeBar.qml">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/VolumeBar.qml</file>
+    <file alias="PlaylistView.qml">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/PlaylistView.qml</file>
+    <file alias="Icon/vinyl.png">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/vinyl.png</file>
+    <file alias="Icon/rose-petals.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/rose-petals.svg</file>
+    <file alias="Icon/autoplay.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/autoplay.svg</file>
+    <file alias="Icon/equalizer.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/equalizer.svg</file>
+    <file alias="Icon/heart.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/heart.svg</file>
+    <file alias="Icon/next-track.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/next-track.svg</file>
+    <file alias="Icon/pause.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/pause.svg</file>
+    <file alias="Icon/play.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/play.svg</file>
+    <file alias="Icon/playlist.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/playlist.svg</file>
+    <file alias="Icon/plus.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/plus.svg</file>
+    <file alias="Icon/repeat.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/repeat.svg</file>
+    <file alias="Icon/shuffle.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/shuffle.svg</file>
+    <file alias="Icon/threedotvertical.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/threedotvertical.svg</file>
+    <file alias="Icon/volume.svg">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Icon/volume.svg</file>
+    <file alias="Resource.qrc">C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/Resource.qrc</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,428 @@
+[
+    {
+        "classes": [
+            {
+                "className": "CustomImage",
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "pixmap",
+                        "notify": "pixmapChanged",
+                        "read": "pixmap",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QPixmap",
+                        "user": false,
+                        "write": "setPixmap"
+                    }
+                ],
+                "qualifiedClassName": "CustomImage",
+                "signals": [
+                    {
+                        "access": "public",
+                        "name": "pixmapChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QQuickPaintedItem"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "customimage.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "MusicLoader",
+                "methods": [
+                    {
+                        "access": "public",
+                        "name": "playMusic",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "pauseMusic",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "nextMusic",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "previousMusic",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "index",
+                                "type": "int"
+                            }
+                        ],
+                        "name": "playAt",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getTitle",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getArtist",
+                        "returnType": "QString"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "file",
+                                "type": "QString"
+                            }
+                        ],
+                        "name": "getAlbumArt",
+                        "returnType": "QPixmap"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setReplay",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "setShuffle",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "vol",
+                                "type": "qreal"
+                            }
+                        ],
+                        "name": "setVolume",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "pos",
+                                "type": "qint64"
+                            }
+                        ],
+                        "name": "setPosition",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "name": "playlist",
+                        "notify": "playlistChanged",
+                        "read": "playlist",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QStringList",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "name": "currentIndex",
+                        "notify": "currentSongChanged",
+                        "read": "getCurrentIndex",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "name": "position",
+                        "notify": "positionChanged",
+                        "read": "position",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "qint64",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "name": "duration",
+                        "notify": "durationChanged",
+                        "read": "duration",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "qint64",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "name": "isReplay",
+                        "notify": "replayChanged",
+                        "read": "isReplay",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setReplay"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "name": "isShuffle",
+                        "notify": "shuffleChanged",
+                        "read": "isShuffle",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false,
+                        "write": "setShuffle"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "name": "volume",
+                        "notify": "volumeChanged",
+                        "read": "volume",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "qreal",
+                        "user": false,
+                        "write": "setVolume"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "name": "currentTitle",
+                        "notify": "currentSongChanged",
+                        "read": "currentTitle",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "name": "currentArtist",
+                        "notify": "currentSongChanged",
+                        "read": "currentArtist",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "name": "albumArt",
+                        "notify": "albumArtChanged",
+                        "read": "albumArt",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QPixmap",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "MusicLoader",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "musicFiles",
+                                "type": "QStringList&"
+                            }
+                        ],
+                        "name": "musicLoadDone",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "qint64"
+                            }
+                        ],
+                        "name": "positionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "qint64"
+                            }
+                        ],
+                        "name": "durationChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "resetProgress",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "currentSongChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "replayChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "shuffleChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "qreal"
+                            }
+                        ],
+                        "name": "volumeChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QPixmap"
+                            }
+                        ],
+                        "name": "albumArtChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "name": "playlistChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "isPlaying",
+                                "type": "bool"
+                            }
+                        ],
+                        "name": "playStateChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "musicFiles",
+                                "type": "QStringList&"
+                            }
+                        ],
+                        "name": "loadMusicIntoPlayer",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "private",
+                        "arguments": [
+                            {
+                                "name": "status",
+                                "type": "QMediaPlayer::MediaStatus"
+                            }
+                        ],
+                        "name": "handleMediaStatusChanged",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "musicloader.h",
+        "outputRevision": 68
+    }
+]

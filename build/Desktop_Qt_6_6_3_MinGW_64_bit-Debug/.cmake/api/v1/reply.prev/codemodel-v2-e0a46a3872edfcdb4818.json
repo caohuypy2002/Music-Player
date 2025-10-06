@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e9002ece3a21c38041fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ASSIGMENT_MusicPlayer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-78c9ffd4a6abc8dfc357.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-c6fb9c194faed2e41fae.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-1f670ff5706ebbda42e8.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-7d76e6194a1817958f8a.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer-Debug-1944f20ec4482b7d2164.json",
+					"name" : "appASSIGMENT_MusicPlayer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_autogen-Debug-e4cae94c0ae9e5e793d3.json",
+					"name" : "appASSIGMENT_MusicPlayer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_autogen_timestamp_deps-Debug-153bef62eafef499f2c2.json",
+					"name" : "appASSIGMENT_MusicPlayer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_qmlimportscan-Debug-a8b7dcbcfdb85c8f56b4.json",
+					"name" : "appASSIGMENT_MusicPlayer_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_qmllint-Debug-fd075247b18b8fc44365.json",
+					"name" : "appASSIGMENT_MusicPlayer_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_qmllint_json-Debug-175fda428f630f266004.json",
+					"name" : "appASSIGMENT_MusicPlayer_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_qmllint_module-Debug-4afb0183edb79bfb736c.json",
+					"name" : "appASSIGMENT_MusicPlayer_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_qmltyperegistration-Debug-2e1201daba3d41efd411.json",
+					"name" : "appASSIGMENT_MusicPlayer_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appASSIGMENT_MusicPlayer_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appASSIGMENT_MusicPlayer_tooling-Debug-5473f243420e3910b48d.json",
+					"name" : "appASSIGMENT_MusicPlayer_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug",
+		"source" : "C:/Users/Asus/Downloads/CRANES/FPTPROJECT/ASSIGMENT_MusicPlayer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

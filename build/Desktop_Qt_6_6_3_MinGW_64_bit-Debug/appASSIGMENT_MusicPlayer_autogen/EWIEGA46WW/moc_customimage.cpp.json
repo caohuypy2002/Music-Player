@@ -1,0 +1,41 @@
+{
+    "classes": [
+        {
+            "className": "CustomImage",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "pixmap",
+                    "notify": "pixmapChanged",
+                    "read": "pixmap",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QPixmap",
+                    "user": false,
+                    "write": "setPixmap"
+                }
+            ],
+            "qualifiedClassName": "CustomImage",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "pixmapChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QQuickPaintedItem"
+                }
+            ]
+        }
+    ],
+    "inputFile": "customimage.h",
+    "outputRevision": 68
+}
