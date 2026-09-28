@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Dialogs
 import MusicLoader 1.0
 import CustomImage 1.0
 
@@ -7,6 +8,8 @@ Window {
     id: root
     width: 640
     height: 280
+    minimumWidth: 500
+    minimumHeight: 260
     visible: true
     title: "Music Player"
 
@@ -21,7 +24,7 @@ Window {
     }
 
     function formatTime(ms) {
-        var totalSeconds = Math.floor(ms / 1000)
+        var totalSeconds = Math.max(0, Math.floor(ms / 1000))
         var minutes = Math.floor(totalSeconds / 60)
         var seconds = totalSeconds % 60
         return minutes + ":" + (seconds < 10 ? "0" : "") + seconds
@@ -46,8 +49,8 @@ Window {
 
             Rectangle {
                 anchors.centerIn: parent
-                width: Math.min(parent.width, parent.height) * 0.8
-                height: Math.min(parent.width, parent.height) * 0.8
+                width: Math.min(parent.width * 0.85, parent.height * 0.85)
+                height: width
                 radius: 20
                 color: "transparent"
                 clip: true
@@ -85,71 +88,138 @@ Window {
 
             ColumnLayout {
                 anchors.fill: parent
+                anchors.leftMargin: 16
+                anchors.rightMargin: 16
+                anchors.topMargin: 8
+                anchors.bottomMargin: 8
                 spacing: 0
 
+                // 1. Top Toolbar Row
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 50
-                    Item { Layout.fillWidth: true }
-                    Item { Layout.fillWidth: true }
-                    CustomButton {
-                        id: volumeBtn
-                        iconSource: "qrc:/Icon/volume.svg"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-                        onClicked: volumeContainer.visible = !volumeContainer.visible
+                    Layout.preferredHeight: 44
+                    Layout.fillHeight: false
+                    spacing: 4
+
+                    Item { Layout.fillWidth: true } // Pushes controls to the right
+
+                    // YouTube-Style Expandable Volume Bar
+                    VolumeBar {
+                        id: volumeBar
+                        musicLoader: musicLoader
+                        Layout.alignment: Qt.AlignVCenter
                     }
-                    CustomButton { iconSource: "qrc:/Icon/equalizer.svg"; Layout.fillWidth: true; Layout.fillHeight: true }
-                    CustomButton { iconSource: "qrc:/Icon/threedotvertical.svg"; Layout.fillWidth: true; Layout.fillHeight: true }
+
+                    CustomButton {
+                        id: equalizerBtn
+                        iconSource: "qrc:/Icon/equalizer.svg"
+                        iconSize: 20
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
+                        onClicked: equalizerWindow.toggle()
+                    }
+
+                    CustomButton {
+                        id: moreBtn
+                        iconSource: "qrc:/Icon/threedotvertical.svg"
+                        iconSize: 20
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
+                        onClicked: moreMenu.toggle(moreBtn, controlSection)
+                    }
                 }
 
+                Item { Layout.fillHeight: true }
+
+                // 2. Song Title & Artist
                 ColumnLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 80
+                    Layout.preferredHeight: 65
+                    Layout.fillHeight: false
                     spacing: 4
 
                     Text {
                         id: songName
                         text: musicLoader.currentTitle
                         color: "white"
-                        font.pixelSize: 28
+                        font.pixelSize: Math.min(30, Math.max(20, root.width * 0.035))
+                        font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         Layout.fillWidth: true
+                        elide: Text.ElideRight
                     }
 
                     Text {
                         id: artistName
                         text: musicLoader.currentArtist
                         color: "lightgrey"
-                        font.pixelSize: 18
+                        font.pixelSize: Math.min(18, Math.max(13, root.width * 0.022))
                         horizontalAlignment: Text.AlignHCenter
                         Layout.fillWidth: true
+                        elide: Text.ElideRight
                     }
                 }
 
+                Item { Layout.fillHeight: true }
+
+                // 3. Action Row (Playlist, Heart/Favorite, Plus/Add File)
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 40
+                    Layout.preferredHeight: 38
+                    Layout.fillHeight: false
 
                     CustomButton {
                         id: playlistBtn
                         iconSource: "qrc:/Icon/playlist.svg"
-                        onClicked: playlistWindow.visible = !playlistWindow.visible
+                        iconSize: 22
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
+                        onClicked: playlistWindow.toggle()
                     }
+
                     Item { Layout.fillWidth: true }
-                    CustomButton { iconSource: "qrc:/Icon/heart.svg" }
+
+                    // Heart / Favorite Song Button
+                    CustomButton {
+                        id: heartBtn
+                        iconSource: (musicLoader && musicLoader.isCurrentFavorite) ? "qrc:/Icon/heart-filled.svg" : "qrc:/Icon/heart.svg"
+                        iconSize: 22
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
+                        scale: (musicLoader && musicLoader.isCurrentFavorite) ? 1.15 : 1.0
+                        Behavior on scale {
+                            NumberAnimation { duration: 150; easing.type: Easing.OutBack }
+                        }
+                        onClicked: {
+                            if (musicLoader) musicLoader.toggleCurrentFavorite()
+                        }
+                    }
+
                     Item { Layout.fillWidth: true }
-                    CustomButton { iconSource: "qrc:/Icon/plus.svg" }
+
+                    // Plus / Add Music File Button
+                    CustomButton {
+                        id: plusBtn
+                        iconSource: "qrc:/Icon/plus.svg"
+                        iconSize: 22
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
+                        onClicked: addMusicDialog.open()
+                    }
                 }
 
+                Item { Layout.fillHeight: true }
+
+                // 4. Seek Progress Bar & Time
                 ColumnLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 60
-                    spacing: 6
+                    Layout.preferredHeight: 46
+                    Layout.fillHeight: false
+                    spacing: 4
 
                     ProgressBar {
                         Layout.fillWidth: true
-                        Layout.preferredHeight: parent.height / 8
+                        Layout.preferredHeight: 18
                         Layout.alignment: Qt.AlignHCenter
                         duration: musicLoader.duration
                     }
@@ -160,6 +230,7 @@ Window {
                             id: currentTime
                             text: formatTime(musicLoader.position)
                             color: "white"
+                            font.pixelSize: 11
                             Layout.fillWidth: true
                             horizontalAlignment: Text.AlignLeft
                         }
@@ -167,22 +238,31 @@ Window {
                             id: totalTime
                             text: formatTime(musicLoader.duration)
                             color: "white"
+                            font.pixelSize: 11
                             Layout.fillWidth: true
                             horizontalAlignment: Text.AlignRight
                         }
                     }
                 }
 
+                Item { Layout.fillHeight: true }
+
+                // 5. Bottom Playback Controls (Shuffle, Prev, Play/Pause, Next, Replay)
                 RowLayout {
                     Layout.fillWidth: true
-                    Layout.preferredHeight: 50
-                    spacing: 0
+                    Layout.preferredHeight: 48
+                    Layout.fillHeight: false
+                    spacing: 12
+                    Layout.alignment: Qt.AlignHCenter
 
                     Item { Layout.fillWidth: true }
 
                     CustomButton {
                         id: shuffle
                         iconSource: "qrc:/Icon/shuffle.svg"
+                        iconSize: 20
+                        Layout.preferredWidth: 36
+                        Layout.preferredHeight: 36
                         property bool isShuffling: false
                         opacity: isShuffling ? 1 : 0.5
                         onClicked: {
@@ -198,7 +278,10 @@ Window {
                     CustomButton {
                         id: previousTrack
                         iconSource: "qrc:/Icon/next-track.svg"
-                        rotation: 180
+                        iconRotation: 180
+                        iconSize: 22
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
                         onClicked: {
                             musicLoader.previousMusic()
                             playPause.isPlaying = true
@@ -209,6 +292,9 @@ Window {
                         id: playPause
                         property bool isPlaying: true
                         iconSource: isPlaying ? "qrc:/Icon/pause.svg" : "qrc:/Icon/play.svg"
+                        iconSize: 26
+                        Layout.preferredWidth: 46
+                        Layout.preferredHeight: 46
                         onClicked: {
                             isPlaying = !isPlaying
                             if(isPlaying) musicLoader.playMusic()
@@ -218,18 +304,22 @@ Window {
 
                     CustomButton {
                         id: nextTrack
+                        iconSource: "qrc:/Icon/next-track.svg"
+                        iconSize: 22
+                        Layout.preferredWidth: 38
+                        Layout.preferredHeight: 38
                         onClicked: {
                             musicLoader.nextMusic()
                             playPause.isPlaying = true
                         }
-                        iconSource: "qrc:/Icon/next-track.svg"
                     }
 
                     CustomButton {
                         id: replayButton
                         iconSource: "qrc:/Icon/autoplay.svg"
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
+                        iconSize: 20
+                        Layout.preferredWidth: 36
+                        Layout.preferredHeight: 36
                         property bool isReplay: false
                         opacity: isReplay ? 1 : 0.5
                         onClicked: {
@@ -244,36 +334,57 @@ Window {
 
                     Item { Layout.fillWidth: true }
                 }
+
+                Item { Layout.preferredHeight: 4 }
             }
 
-            Rectangle {
-                id: volumeContainer
-                width: 100
-                height: 10
-                color: "transparent"
-                visible: false
-                z: 10
-
-                onVisibleChanged: {
-                    if (visible) {
-                        var pos = volumeBtn.mapToItem(controlSection, 0, volumeBtn.height)
-                        x = pos.x + volumeBtn.width/2 - width/2
-                        y = pos.y
-                    }
-                }
-
-                VolumeBar {
-                    anchors.fill: parent
-                    rotation: -90
-                    transformOrigin: Item.Center
-                }
+            // More Options Menu Popup
+            MoreMenu {
+                id: moreMenu
+                musicLoader: musicLoader
+                z: 100
             }
         }
     }
 
+    // Windows & Dialogs
     PlaylistView {
         id: playlistWindow
         musicLoader: musicLoader
         visible: false
+    }
+
+    EqualizerView {
+        id: equalizerWindow
+        musicLoader: musicLoader
+        visible: false
+    }
+
+    SongInfoDialog {
+        id: songInfoDialog
+        musicLoader: musicLoader
+        visible: false
+    }
+
+    FileDialog {
+        id: addMusicDialog
+        title: "Select Audio Files"
+        fileMode: FileDialog.OpenFiles
+        nameFilters: ["Audio Files (*.mp3 *.wav *.flac *.m4a *.aac *.ogg)", "All Files (*)"]
+        onAccepted: {
+            for (var i = 0; i < selectedFiles.length; i++) {
+                musicLoader.addMusicFile(selectedFiles[i])
+            }
+        }
+    }
+
+    KeyboardFunction {
+        id: keyboardHandler
+        musicLoader: musicLoader
+        playlistWindow: playlistWindow
+        equalizerWindow: equalizerWindow
+        volumeBar: volumeBar
+        focus: true
+        Component.onCompleted: forceActiveFocus()
     }
 }

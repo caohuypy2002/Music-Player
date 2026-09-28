@@ -25,16 +25,16 @@ qt_add_qml_module(appASSIGMENT_MusicPlayer
         QML_FILES ProgressBar.qml
         RESOURCES
         RESOURCES
-        RESOURCES Icon/vinyl.png Icon/rose-petals.svg Icon/autoplay.svg Icon/equalizer.svg Icon/heart.svg Icon/next-track.svg Icon/pause.svg Icon/play.svg Icon/playlist.svg Icon/plus.svg Icon/repeat.svg Icon/shuffle.svg Icon/threedotvertical.svg Icon/volume.svg
+        RESOURCES Icon/vinyl.png Icon/rose-petals.svg Icon/autoplay.svg Icon/equalizer.svg Icon/heart.svg Icon/heart-filled.svg Icon/next-track.svg Icon/pause.svg Icon/play.svg Icon/playlist.svg Icon/plus.svg Icon/repeat.svg Icon/shuffle.svg Icon/threedotvertical.svg Icon/volume.svg Icon/mute.png
         RESOURCES Resource.qrc
         SOURCES musicloader.h musicloader.cpp
-        RESOURCES
         QML_FILES VolumeBar.qml
-        SOURCES
-        SOURCES
-        SOURCES
         SOURCES customimage.h customimage.cpp
         QML_FILES PlaylistView.qml
+        QML_FILES EqualizerView.qml
+        QML_FILES MoreMenu.qml
+        QML_FILES SongInfoDialog.qml
+        QML_FILES KeyboardFunction.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

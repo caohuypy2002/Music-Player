@@ -14,5 +14,7 @@
         <file>Icon/shuffle.svg</file>
         <file>Icon/threedotvertical.svg</file>
         <file>Icon/volume.svg</file>
+        <file>Icon/mute.png</file>
+        <file>Icon/heart-filled.svg</file>
     </qresource>
 </RCC>
